@@ -1,0 +1,111 @@
+#body{
+  max-width: 1000px;
+  margin: auto;
+  background-color: #F0EAD6;
+}
+#company-name{
+ text-align: center;
+}
+#header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 3fr;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #E5E2CF;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+#header-img{
+  width: 50px; 
+}
+
+#mailing-list {
+  text-align: center;
+  margin: 100px;
+}
+#chef{
+  width: 140px;
+  max-width: 100%;
+  height: auto;
+}
+#pan{
+  width: 140px;
+   max-width: 100%;
+  height: auto;
+}
+#alien{
+  width: 140px;
+   max-width: 100%;
+  height: auto;
+}
+.icon {
+  grid-area: icon;
+  place-self: center;
+}
+.description {
+  grid-area: descrip;
+}
+.grid {
+  display: grid;
+  grid-template-areas: "icon descrip";
+  grid-template-columns: 1fr 6fr;
+  margin: 20px;
+  
+}
+#demo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav-link{
+  Font-size: 25px;
+  text-decoration: none;
+  
+}
+.nav-link:hover{
+  color: black;
+ 
+}
+#nav-list{
+  list-style: none;
+  margin-right: 10px;
+  
+}
+#small-pan{
+  grid-area: small;
+}
+#medium-pan{
+  grid-area: medium;
+}
+#large-pan{
+  grid-area: large;
+}
+.products{
+  display: grid;
+  grid-template-areas:"small medium large";
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+@media only screen and (max-width: 600px){
+  .products{
+    display: grid;
+    grid-template-areas: "small small"
+                          "medium medium"
+                          "large large";
+  }
+  .icon{
+    visibility: hidden;
+  }
+  #nav-list{
+    display: flex;
+    flex-direction: column;
+  }
+}
